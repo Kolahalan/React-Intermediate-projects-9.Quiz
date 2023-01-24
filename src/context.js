@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
   const [index,setIndex] = useState(0)
   const [questions,setQuestions] = useState([])
   const [correct,setCorrect] = useState(0)
-  const [error,setError] = useState(true)
+  const [error,setError] = useState(false)
   const [isModelOpen,setIsModelOpen] = useState(false)
   const [quiz,setQuiz] = useState({
     amount:10,
@@ -93,9 +93,6 @@ const AppProvider = ({ children }) => {
     fetchQuestions(url)
   }
 
-  useEffect(()=>{
-    fetchQuestions(tempURL)
-  },[])
   return <AppContext.Provider value={{
     waiting,
     loading,
