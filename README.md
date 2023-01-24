@@ -7,5 +7,5 @@
 
 **Note:** Some of the responses from server comes in a HTML format. 
 
-Hence ``dangerouslySetInnerHTML={{ __html: answer}}`` is used to convert them from HTML format. Never used it against user input.
+Hence ``dangerouslySetInnerHTML={{ __html: answer}}`` is used to convert them from HTML format. Never use it against user input.
 This can be used only over a server responses at rare cases
